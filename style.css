@@ -1,0 +1,34 @@
+:root{
+    font-size: 14pt;
+    font-family: sans-serif;
+}
+
+/* Root elements - sākotnējs pseudo elements uz lapas */
+
+
+/* Selektori */
+/* h1, h2, h3, p, img, a, ul, li, table, td, tr  - pēc elementa nosaukuma */
+h1{
+    color:#f32a07;
+    font-size: 3rem;
+    height: 150px;
+
+}
+h2{
+    color:#911701;
+    font-size: 2rem;
+}
+h3{
+    color:#681001;
+    font-size: 1.5rem;
+}
+h1,h2,h3{
+    background-color: rgb(242, 170, 75);
+    text-align: center;
+}
+p{
+    width: 60%;
+}
+img{
+    width: 100px;
+}
