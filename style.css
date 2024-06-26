@@ -12,7 +12,7 @@ h1{
     color:#f32a07;
     font-size: 3rem;
     height: 150px;
-
+    margin-bottom: 300px;
 }
 h2{
     color:#911701;
@@ -25,10 +25,18 @@ h3{
 h1,h2,h3{
     background-color: rgb(242, 170, 75);
     text-align: center;
+
 }
 p{
-    width: 60%;
+    width: 75%;
+    margin-left: 100px;
+    margin:auto;
+    /* Liek elementu centrā, bet atceļ iepriekšējās atkāpes */
 }
 img{
     width: 100px;
+    margin:auto;
+    display: block;
+    /* pārveido par bloka elementu */
+    margin-bottom: 30px;
 }
