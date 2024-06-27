@@ -4,10 +4,14 @@
 :root{
     font-size: 14pt;
     font-family: sans-serif;
+   
 }
 
-/* Root elements - sākotnējs pseudo elements uz lapas */
 
+/* Root elements - sākotnējs pseudo elements uz lapas */
+body{
+    margin: 0px;
+}
 
 /* Selektori */
 /* h1, h2, h3, p, img, a, ul, li, table, td, tr  - pēc elementa nosaukuma */
