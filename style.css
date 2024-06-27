@@ -113,16 +113,17 @@ footer h3{
     border: solid 2px rgb(242, 170, 75);
     color: rgb(164, 98, 12);
     padding: 5px;
+    resize: none;
 }
 
 .footer_right_div form input:focus-visible, 
 .footer_right_div form textarea:focus-visible{
     border: solid 2px rgb(164, 98, 12);
     outline:none;
-
-
 }
-
+.form_submit_btn{
+    cursor: pointer;
+}
 
 
 
