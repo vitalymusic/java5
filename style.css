@@ -1,3 +1,6 @@
+/* Visi importi tikai šeit  */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+ES:wght@100..400&display=swap');
+
 :root{
     font-size: 14pt;
     font-family: sans-serif;
@@ -71,6 +74,40 @@ table{
     background-color: hsl(14, 100%, 53%);
 }
 
+
+header{
+    background-image: url("https://www.freewebheaders.com/wp-content/gallery/gold/cache/golden-metal-plate-with-screws-website-header.jpg-nggid044028-ngg0dyn-1280x375x100-00f0w010c010r110f110r010t010.jpg");
+    /* Fona attēls */
+    background-size: 100% 100%;
+    /* background-size: cover; */
+}
+
+    header h1{
+        background-color: transparent;
+        margin-bottom: 0px;
+        height: auto;
+        margin-top: 0px;
+        font-family: "Playwrite ES", cursive;
+        font-size: 5rem;
+        position: relative;
+        left:-50px;
+        text-shadow: 2px 4px 10px rgb(97, 97, 97);
+    }
+    header h2{
+        background-color: transparent;
+        margin-top: 0px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.5rem;
+        position: relative;
+        right:-191px;
+        top:-43px;
+        transform: rotate(-5deg);
+        text-shadow: 2px 4px 5px rgb(252, 249, 249);
+    }
+
+
+
+
 footer{
     background-color: black;
     color:white;
@@ -124,6 +161,8 @@ footer h3{
 .form_submit_btn{
     cursor: pointer;
 }
+
+
 
 
 
