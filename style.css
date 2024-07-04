@@ -113,10 +113,11 @@ header{
         font-family: "Bebas Neue", sans-serif;
         font-size: 2.5rem;
         position: relative;
-        right:-191px;
+        left:calc(50% - 50px);
         top:-43px;
         transform: rotate(-5deg);
         text-shadow: 2px 4px 5px rgb(252, 249, 249);
+        width: 450px;
     }
 
 
@@ -210,3 +211,19 @@ footer h3{
 
 
 
+
+/* Media vaicājumi */
+
+@media screen and (max-width:1200px) {
+     /* planšetes */
+    body{
+        background-color: rgb(4, 255, 0);
+    }
+}
+
+@media screen and (max-width:450px) {
+        /* Mobīlie telefoni */
+    body{
+        background-color: rgb(43, 0, 255);
+    }
+}
