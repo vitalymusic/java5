@@ -6,6 +6,14 @@
     font-family: sans-serif;
     scroll-behavior: smooth;
     /* Lēni tinās */
+
+
+    /* mainīgie */
+    --text_color1:#f32a07;
+    --text_color2:#911701;
+    --text_color3:#681001;
+    --main_background: url("https://www.freewebheaders.com/wp-content/gallery/gold/cache/golden-metal-plate-with-screws-website-header.jpg-nggid044028-ngg0dyn-1280x375x100-00f0w010c010r110f110r010t010.jpg");
+
 }
 
 
@@ -18,17 +26,17 @@ body{
 /* Selektori */
 /* h1, h2, h3, p, img, a, ul, li, table, td, tr  - pēc elementa nosaukuma */
 h1{
-    color:#f32a07;
+    color:var(--text_color1);
     font-size: 3rem;
     height: 150px;
     margin-bottom: 300px;
 }
 h2{
-    color:#911701;
+    color:var(--text_color2);
     font-size: 2rem;
 }
 h3{
-    color:#681001;
+    color:var(--text_color3);
     font-size: 1.5rem;
 }
 h1,h2,h3{
@@ -82,7 +90,7 @@ table{
 
 
 header{
-    background-image: url("https://www.freewebheaders.com/wp-content/gallery/gold/cache/golden-metal-plate-with-screws-website-header.jpg-nggid044028-ngg0dyn-1280x375x100-00f0w010c010r110f110r010t010.jpg");
+    background-image: var(--main_background);
     /* Fona attēls */
     background-size: 100% 100%;
     /* background-size: cover; */
