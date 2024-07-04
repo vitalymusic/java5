@@ -219,11 +219,46 @@ footer h3{
     body{
         background-color: rgb(4, 255, 0);
     }
+
+    header h1{
+        font-size: 3rem;
+    }
+
+    header h2{
+        font-size: 2rem;
+        top:-30px;
+        left: calc(50% - 100px);
+    }
+
+    a{
+        left:60%;
+    }
+
+
+
+
+
+
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:710px) {
         /* Mobīlie telefoni */
     body{
         background-color: rgb(43, 0, 255);
+    }
+
+
+    a{
+        position: static;
+        margin:auto;
+        display: block;
+        width:300px;
+        margin-top:30px;
+    }
+
+    a h5{
+        display: block;
+        text-align: center;
+        margin:0px;
     }
 }
