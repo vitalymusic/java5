@@ -248,6 +248,41 @@ footer h3{
     }
 
 
+    header h1{
+        /* font-size: 3rem; */
+        position: static;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    header h2{
+        /* font-size: 2rem;
+        top:-30px;
+        left: calc(50% - 100px); */
+
+        transform: rotate(0deg);
+        font-size: 1.3rem;
+        position: static;
+        text-align: right;
+        width:100%;
+        margin-right: 30px;
+
+    }
+
+
+
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+        position: static;
+
+    }
+
+    nav a{
+        text-align: center;
+    }
+
     a{
         position: static;
         margin:auto;
@@ -260,5 +295,10 @@ footer h3{
         display: block;
         text-align: center;
         margin:0px;
+    }
+
+
+    footer{
+        flex-direction: column;
     }
 }
