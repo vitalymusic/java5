@@ -4,13 +4,15 @@
 :root{
     font-size: 14pt;
     font-family: sans-serif;
-   
+    scroll-behavior: smooth;
+    /* Lēni tinās */
 }
 
 
 /* Root elements - sākotnējs pseudo elements uz lapas */
 body{
     margin: 0px;
+    
 }
 
 /* Selektori */
@@ -108,6 +110,36 @@ header{
         transform: rotate(-5deg);
         text-shadow: 2px 4px 5px rgb(252, 249, 249);
     }
+
+
+    /* Navigācija */
+
+
+    nav{
+        display: flex;
+        justify-content: center;
+        gap:10px;
+        background: #fff;    
+        /* pielīmēt pie ekrāna augšas */
+        position: sticky;
+        top:10px;
+    }
+
+    nav a{
+        position: static;
+        margin:0px;
+    }
+
+
+    h3{
+        scroll-margin-top: calc(10px + 36px + 10px);
+        /* position: relative;
+        top: */
+    }
+
+
+
+
 
 
 
