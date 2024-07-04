@@ -20,7 +20,7 @@
 /* Root elements - sākotnējs pseudo elements uz lapas */
 body{
     margin: 0px;
-    
+    box-sizing: border-box;
 }
 
 /* Selektori */
@@ -132,6 +132,7 @@ header{
         /* pielīmēt pie ekrāna augšas */
         position: sticky;
         top:10px;
+        padding: 10px;
     }
 
     nav a{
@@ -217,7 +218,7 @@ footer h3{
 @media screen and (max-width:1200px) {
      /* planšetes */
     body{
-        background-color: rgb(4, 255, 0);
+        /* background-color: rgb(4, 255, 0); */
     }
 
     header h1{
@@ -244,10 +245,14 @@ footer h3{
 @media screen and (max-width:710px) {
         /* Mobīlie telefoni */
     body{
-        background-color: rgb(43, 0, 255);
+        /* background-color: rgb(43, 0, 255); */
     }
 
 
+    header{
+        width: 100%;
+        /* padding: 10px; */
+    }
     header h1{
         /* font-size: 3rem; */
         position: static;
@@ -259,13 +264,15 @@ footer h3{
         /* font-size: 2rem;
         top:-30px;
         left: calc(50% - 100px); */
-
+        /* outline: #f32a07 2px solid; */
         transform: rotate(0deg);
         font-size: 1.3rem;
-        position: static;
+        position: relative;
+        top:-20px;
+        left:-10px;
         text-align: right;
         width:100%;
-        margin-right: 30px;
+        /* padding-right: 30px; */
 
     }
 
