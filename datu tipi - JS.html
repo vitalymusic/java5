@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Javascriptā ir atšķirīgi lielie un mazie burti mansdatums1, mansDatums1
+        // Katras instrukcijas beigās liekam ';'
+
+        // {
+
+        // }
+
+        // Datu ievade / saglabāt
+        // Datu apstrāde
+        // Datu izvade
+
+        // Datu ievade
+
+        // prompt('Ievadiet lūdzu skaitli');
+
+
+        // Datu saglabāšanai izmanto mainīgos
+
+        let mansVards = "<h1>Vitālijs</h1>"; //String
+        let mansUzvards;
+        let vecums = 40; //Integer,float
+        let patikProgrammet = true; //false //boolean
+
+        let krasas = ["dzeltena","zila",3,false,[]]; //Masīvs (array)
+        let tabula = [
+            ["pirmā šūna","otrā šūna","trešā sūna"],
+            ["pirmā šūna","otrā šūna","trešā sūna"],
+            ["pirmā šūna","otrā šūna","trešā sūna"]
+        ]//Masīvs (array)
+        
+        let maja = {
+            istabuSkaits:6,
+            krāsa:"Gaiši zila",
+            platiba:250,
+            pardota:false,
+            zvans:function(){
+                alert("Zvanu");
+            }
+        };//Objekts
+
+        // Typescript - JS a iepriekš definētiem mainīgo tipiem, risina arī saderības problēmas. Bet typescript ir Jakompilē;
+
+        console.log(mansVards);
+        document.write(mansVards,vecums,patikProgrammet);
+        document.write("<br>");
+        document.write(krasas);
+        document.write("<br>");
+        document.write(maja.krāsa);
+        document.write(maja.platiba);
+
+        // maja.zvans();
+
+        document.write(mansUzvards);
+
+
+        // Operātori
+        // + - * / Matematiskie
+        // && || loģiskie
+        // ++ -- palielināšana par 1 un samazināšana par 1 
+        // += -= *= /=  - matemāt.darbiba ar to sakitli kas ir mainigajā
+        // Salidzināšanas operatori: > < >= <= == === != !== 
+
+
+        // Rēķināšana
+
+        let skaitlis1 = 5, skaitlis2 = 8;
+
+        document.write("<h1>Šo skaitļu summa ir: " + (skaitlis1 + skaitlis2) + "</h1>");  // Konkatinēšana  
+        // Pieliekam klāt - * / 
+        document.write("<h1>Šo skaitļu starpība ir: " + (skaitlis1 - skaitlis2) + "</h1>");  // Konkatinēšana  
+        document.write("<h1>Šo skaitļu reizinājums ir: " + (skaitlis1 * skaitlis2) + "</h1>");  // Konkatinēšana  
+        document.write("<h1>Šo skaitļu dalījums ir: " + (skaitlis1 / skaitlis2) + "</h1>");  // Konkatinēšana  
+
+
+        
+
+        // Skaitļa izvades formatēšana
+        document.write((6.71*45.5).toFixed(2));
+
+        // Skaitļa noapaļošana līdz 2 zīmēm aiz komata
+
+
+        document.write("<br><br>");
+        document.write(Math.round(2.45789));
+        document.write(Math.floor(2.65789));
+        document.write(Math.ceil(2.35789));
+
+        document.write("<br><br>");
+
+        document.write(Math.trunc(Math.random()*255));
+
+
+        // Nedaudz maģijas
+
+        let red = Math.trunc(Math.random()*255),
+            green = Math.trunc(Math.random()*255),
+            blue = Math.trunc(Math.random()*255)
+
+        document.body.style.background = `rgb(${red},${green},${blue})`; 
+        // rgb(34,56,78)      
+
+
+    </script>
+</body>
+</html>
