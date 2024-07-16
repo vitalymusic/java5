@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cikli</title>
+</head>
+<body>
+    <script>
+        // Cikli
+
+        // for cikls ar nosacījumu
+
+        // for(let i = 0; i<=100; i++){
+        //     document.write(i + "<br>");
+        // }
+        // Skaitļu summētājs
+
+        // let skaitluDaudzums = prompt("Ievadi cik daudz skaitļu vēlies saskaitīt!");
+
+        // let rezultats  = 0;
+        // for(let i = 0; i<skaitluDaudzums; i++){
+        //     rezultats  += +prompt("Ievadi skaitli " + (i+1));
+        // }
+        // document.write(rezultats);
+        // console.log(rezultats);
+
+        let atteli = [
+            "https://epicode.com/wp-content/uploads/2022/08/html-e-css-1.jpg",
+            "https://www.investopedia.com/thmb/33J47lYaGMBV4nx8vdJNtHBv3cY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/html.asp-final-86da30eff12f46f3a1394efb0b137103.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReP0EyLMzyl9_uRHg3hZ54wkm-jecTUW95KA&s",
+            "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/what-is-html-3.jpg"
+        ];
+
+        for(let attels of atteli){
+            document.write(`<img src="${attels}" width="500px"><br>`);
+            // for of ir domāts Masīviem. 
+        }
+
+    </script>
+</body>
+</html>
