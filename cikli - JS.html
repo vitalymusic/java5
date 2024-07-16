@@ -37,6 +37,23 @@
             // for of ir domāts Masīviem. 
         }
 
+
+        // for in strādā ar objektiem
+
+        let maja = {
+            istabuSkaits:6,
+            krāsa:"Gaiši zila",
+            platiba:250,
+            pardota:false,
+            zvans:function(){
+                alert("Zvanu");
+            }
+        };//Objekts
+
+        for(vertiba in maja){
+            document.write(vertiba + ":"+ maja[vertiba] + "<br>");
+        }
+
     </script>
 </body>
 </html>
