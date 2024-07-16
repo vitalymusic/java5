@@ -109,6 +109,33 @@
         // rgb(34,56,78)      
 
 
+        // string datu tips teksts
+
+        let teksts1 = "teksts1";
+        let teksts2 = 'teksts1';
+        let teksts3 = `teksts1`;
+
+
+        let table1 = "<table border=\"1\">";
+            table1+="<tr>";
+            table1+="<td>Red:"+red+"</td>";    
+            table1+="<td>Green:"+green+"</td>";    
+            table1+="<td>Blue:"+blue+"</td>";
+            table1+="</tr></table>";    
+        // Konkatenācija
+
+        let table2 = `
+        <table border="1" width="50%">
+          <tr>
+           <td>Red: ${red}</td>
+           <td>Green: ${green}</td>
+           <td>Blue: ${blue}</td>
+          </tr> 
+        </table>
+        `;        
+
+            document.write(table2);
+
     </script>
 </body>
 </html>
