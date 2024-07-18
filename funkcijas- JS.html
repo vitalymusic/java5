@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funkcijas</title>
+</head>
+<body>
+    <script>
+        // Funkcijas deklarēšana
+
+        function saskaitisana(skaitlis1, skaitlis2){
+            document.write(skaitlis1+skaitlis2 + "<br>");
+        }   
+        
+        function reizinasana(skaitluMasivs){
+            atbilde = 1;
+            for(skaitlis of skaitluMasivs){
+                atbilde *= skaitlis;
+            }
+
+            document.write("Skaitļu reizinājums ir: "+ atbilde +"<br>" );
+
+        }
+        
+
+        document.body.onload = function(){
+            // Funkcijas palaišana
+            saskaitisana(123,456);
+            saskaitisana(34,4);
+            saskaitisana(321,123);
+            saskaitisana(4,6);
+            saskaitisana(678,789789);
+
+
+            //reizinasana
+            
+            reizinasana([3,4,5,6,7,8,9]);
+            reizinasana([3,4,5,6,7,8,0]);
+            reizinasana([345,345,345]);
+            reizinasana([123,345,456,5678,789]);
+
+        }
+    </script>
+</body>
+</html>
