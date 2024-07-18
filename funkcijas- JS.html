@@ -6,8 +6,13 @@
     <title>Funkcijas</title>
 </head>
 <body>
+
+
+
     <script>
         // Funkcijas deklarēšana
+
+        let atbilde = 0;
 
         function saskaitisana(skaitlis1, skaitlis2){
             document.write(skaitlis1+skaitlis2 + "<br>");
@@ -18,11 +23,22 @@
             for(skaitlis of skaitluMasivs){
                 atbilde *= skaitlis;
             }
+            // document.write("Skaitļu reizinājums ir: "+ atbilde +"<br>" );
 
-            document.write("Skaitļu reizinājums ir: "+ atbilde +"<br>" );
+            return atbilde;
+
+
+            // Funkcijas rezultāta ierakstišana mainigajā
+
+
 
         }
         
+
+        function lielaisTeksts(teksts){
+                return teksts.toUpperCase();
+            }
+            
 
         document.body.onload = function(){
             // Funkcijas palaišana
@@ -34,13 +50,26 @@
 
 
             //reizinasana
-            
-            reizinasana([3,4,5,6,7,8,9]);
-            reizinasana([3,4,5,6,7,8,0]);
-            reizinasana([345,345,345]);
-            reizinasana([123,345,456,5678,789]);
 
+            // alert(reizinasana([3,4,5,6,7,8,9]))
+            
+            
+            // reizinasana([3,4,5,6,7,8,0]);
+            // reizinasana([345,345,345]);
+            // reizinasana([123,345,456,5678,789]);
+            
+            
+            // bultfunkcija
+            document.body.onclick = ()=>{
+                //alert(reizinasana([3,4,5,6,7,8,9]));
+
+                document.write(lielaisTeksts(prompt("Ievadi tekstu šeit")));
+            }
         }
+
+
+        console.log(atbilde);
+       
     </script>
 </body>
 </html>
