@@ -1,3 +1,7 @@
 1. uzdevums
 Ir doti divi skaitļi (var pašiem izdomāt)
 Veikt šo skaitļu reizināšanu, saskaitīšanu, dalīšanu un atņemšanu un izvadīt rezultātus tabulas veidā;
+
+2. uzdevums
+Ir dots masīvs ar skaitļiem: 1,3,5,7,9,11,13,15
+Jāuzraksta cikls ar kuru jāsaskaita visu šo skaitļu summu
