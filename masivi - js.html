@@ -8,18 +8,31 @@
 <body>
     
     <script>
-        let produktuGrozs = [];
+        // let produktuGrozs = [];
 
-        while(confirm("Vai pievienot vēl produktus?")){
+        // while(confirm("Vai pievienot vēl produktus?")){
 
-            // elementu pievienošana pie masīva
+        //     // elementu pievienošana pie masīva
             
-            produktuGrozs.push(prompt("Ievadiet produkta nosaukumu"));
+        //     produktuGrozs.push(prompt("Ievadiet produkta nosaukumu"));
 
-        }
+        // }
+
+
+        let produktuGrozs = ["maize","piens","desa"];
+        produktuGrozs.pop(); //dzēš pēdējo elementu
+        produktuGrozs.unshift("Jauns produkts"); //Ieliek jaunu elementu masīvā ka pirmo
+        produktuGrozs.shift();// dzeš pirmo elementu 
+
+        
 
         document.write(produktuGrozs);
         console.log(produktuGrozs);
+
+
+
+
+
 
     </script>
 </body>
