@@ -9,20 +9,17 @@
 
     <script>
         function laiks(){
-
-        
              let tekosaisLaiksunDatums = new Date();
              
              let stundas = tekosaisLaiksunDatums.getHours();
              let minutes = tekosaisLaiksunDatums.getMinutes();
              let sekundes = tekosaisLaiksunDatums.getSeconds();
 
-
              let out = `Pašlaik ir: ${stundas}:${minutes}:${sekundes < 10 ? "0"+sekundes:sekundes}`;
              document.body.innerHTML = out;
         }
 
-        
+
         setInterval(laiks,1000);
         
 
