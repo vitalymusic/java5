@@ -4,18 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .text{
+            /* height: 10px; */
+            outline: 1px solid red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Virsraksts</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, enim. Earum repellat dolores suscipit labore iste nobis, libero sit iusto ipsam deserunt commodi natus minus asperiores perspiciatis. Quasi, voluptas voluptatem.</p>
+    <h1 id="virsr1">Mācos DOM ar JavaScript</h1>
+    <p class="main_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, enim. Earum repellat dolores suscipit labore iste nobis, libero sit iusto ipsam deserunt commodi natus minus asperiores perspiciatis. Quasi, voluptas voluptatem.</p>
+    <p>rindkopa 2</p>
     <div class="out">
 
     </div>
 
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+    <div class="text"></div>
+
     <script>
+        // 1. Skriptam jalaižās pēc dokumenta satura ielādes
+
+        let virsraksts  = document.getElementById("virsr1");
+        let rindkopa = document.querySelector("p.main_text");
+        let div = document.querySelector(".out");
+        
+        
+        // Teksta izvade elementā
+
+        // innerHTML innerText
+
+        let rindkopasTeksts = rindkopa.innerText;
+        div.innerText = rindkopasTeksts;
+        div.innerHTML += `
+            <h3>Jauns virsraksts</h3>
+            <p>Jauns teksts</p>
+        `;
+
+        console.log(rindkopasTeksts);
+
+
+        // daudzu elementu atlasei izmanto:
+       let tekstaDiv1 = document.getElementsByClassName("text");//vecā metode pēc klases
+       let tekstaDiv2 = document.querySelectorAll(".text");
+
+        console.log(tekstaDiv1,tekstaDiv2);
+
+
+        for(katrsDiv of tekstaDiv1){
+            katrsDiv.innerHTML = "Hello";
+        }
+
+        console.log(tekstaDiv2.typeOf);
+
+        for(let i=0;i<tekstaDiv2.length;i++){
+            tekstaDiv2[i].innerHTML += ` ${i+1}`;
+        }
+
+
+        virsraksts.style.color = `rgb(34,150,200)`;
+
+        document.body.style.background = `linear-gradient(blue,red)`;
+        document.body.style.color = `white`;
+        document.title = virsraksts.innerText;
+
+        // tekstaDiv1.innerHTML = "Hello";
         
 
+        let krasas = [
+            "#594157",
+            "#726DA8",
+            "#7D8CC4",
+            "#A0D2DB",
+            "#BEE7E8"
+        ];
 
+        function krasuGenerators(){
+            krasasNumurs = Math.abs(Math.round(Math.random()*krasas.length-1));
+            document.body.style.background = krasas[krasasNumurs]
+            // Pamēģināt lai krāsa mainās izmantojot hue skalu 
+
+            // pieraksts ir background:hsl(0-255,128,128)
+        }
+        setInterval(krasuGenerators,5000);
 
 
     </script>
