@@ -24,13 +24,43 @@
         produktuGrozs.unshift("Jauns produkts"); //Ieliek jaunu elementu masīvā ka pirmo
         produktuGrozs.shift();// dzeš pirmo elementu 
 
-        
 
-        document.write(produktuGrozs);
-        console.log(produktuGrozs);
+        rezultats = produktuGrozs.join(":");
+
+        let krasas = ["balta","sarkana","zaļa"];
+
+       let lielaisMasivs = produktuGrozs.concat(krasas,krasas);
 
 
+        // splice() - pievieno masīvam elementus jebkurā vietā un nodzēš no jebkuras vietas
+        // Maina pašu masīvu 
 
+        // rezultats = produktuGrozs.splice(0,0,"jauns produkts");
+
+
+        // find un findIndex = šis funkcijas izmanto paildus test funkcijas lai pārbaudītu katra masīva elementu
+
+        rezultats  = produktuGrozs.findIndex(function(item,index){
+                if(item == "piens"){
+                    return item; //return ir jāraksta obligāti, lai funkcija find varētu atgriezt rezultātu
+                }
+                
+        })
+
+       rezultats =  produktuGrozs.map(function(item){
+            return item.toUpperCase();
+        })
+
+        console.log(lielaisMasivs);
+        lielaisMasivs.sort();
+        // document.write(produktuGrozs);
+        console.log(lielaisMasivs);
+
+        // Skaitļu kārtošanai izmanto palīgfunkciju
+        let points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b){
+            return a - b
+        });
 
 
 
