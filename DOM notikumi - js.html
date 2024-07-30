@@ -47,6 +47,20 @@
             document.querySelector("h1").remove();
         })
 
+
+        let atteluElementi = document.querySelectorAll(".images img");
+
+        for(attels of atteluElementi){
+            attels.addEventListener("mouseover",function(){
+            //let src = this.src;
+            document.querySelector(".preview img").src = this.src;
+        });
+        }
+
+        
+
+       
+
     </script>
 </body>
 </html>
