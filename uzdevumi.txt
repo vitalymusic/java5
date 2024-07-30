@@ -22,7 +22,7 @@ Uzrakstīt funkciju showMenu() kura uzvada uz lapas navigācijas izvēlne no mas
 [
     {
         nosaukums:"Galvenā lapa",
-        url:"/" 
+        url:"index.html" 
     },
     {
         nosaukums:"Par mums",
