@@ -12,3 +12,9 @@ Uzrakstīt funkciju, kas aprēķina dotā teksta zīmju skaitu un atgriež rezul
 
 4. uzdevums
 Uzrakstīt funkciju, kas aprēķina istabas grieztu un grīdas platumu, un sienu platumu. izmantot 3 argumentus. Izvadīt rezultātu dokumentā
+5. uzdevums 
+Uzrakstīt funkciju gallery() kas ievieto blokā <div class="galerija"> 8  <img src="" class="galerijasAttels"> elementus
+funkcijā izmantot innerHTML un ciklu
+
+
+
