@@ -12,13 +12,14 @@ Uzrakstīt funkciju, kas aprēķina dotā teksta zīmju skaitu un atgriež rezul
 
 4. uzdevums
 Uzrakstīt funkciju, kas aprēķina istabas grieztu un grīdas platumu, un sienu platumu. izmantot 3 argumentus. Izvadīt rezultātu dokumentā
+
 5. uzdevums 
 Uzrakstīt funkciju gallery() kas ievieto blokā 
 <div class="galerija"></div> astoņus  <img src="" class="galerijasAttels"> elementus
 Funkcijā jāizmanto innerHTML un ciklu
 
 6. uzdevums 
-Uzrakstīt funkciju showMenu() kura uzvada uz lapas navigācijas izvēlne no masīva (karts masīva elements ir objekts)
+Uzrakstīt funkciju showMenu() kura uzvada uz lapas navigācijas izvēlni no masīva (karts masīva elements ir objekts)
 [
     {
         nosaukums:"Galvenā lapa",
