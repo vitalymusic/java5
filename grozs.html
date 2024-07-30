@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pircēja grozs</title>
+</head>
+<body>
+        <h1>Jūsu grozs</h1>
+        <table border="1" width="500px">
+           <thead>
+                <tr>
+                    <td>Produkta nosaukums</td>
+                    <td>Cena</td>
+                    <td>Summa</td>
+                </tr>
+           </thead>
+           <tbody>
+                <!-- Te liekam produktus ar JS -->
+           </tbody>
+           <tfoot>
+                <!-- Te liekam kopējo summu par precēm ar JS-->
+           </tfoot>
+        </table>
+    <script>
+        let grozs = JSON.parse(window.localStorage.getItem("grozs"));
+        let kopejaSumma = 0;
+        
+        for(produkts of grozs){
+            document.querySelector("tbody").innerHTML+= `
+                <tr>
+                    <td>${produkts.produktaNosaukums}</td>
+                    <td>${produkts.cena}</td>
+                    <td>${(produkts.cena*produkts.daudzums).toFixed(2)}</td>
+                </tr>    
+            `;
+             kopejaSumma+= produkts.cena*produkts.daudzums;
+
+        }
+        document.querySelector("tfoot").innerHTML+=`
+            Kopējā produktu summa: ${kopejaSumma.toFixed(2)} Eur
+        `;
+      
+      
+      
+        //  console.log(grozs);
+
+    </script>
+</body>
+</html>
