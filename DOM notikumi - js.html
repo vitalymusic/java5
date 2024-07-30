@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <style>
+        @keyframes fadeIn{
+            from{
+                opacity: 0%;
+            }
+            to{
+                opacity: 100%;
+            }
+        }
+
+
+        .animateFadein{
+            animation: fadeIn 1s linear;
+        }
+    </style>
 </head>
 <body>
     <h1></h1>
@@ -16,7 +33,7 @@
     </div>
     <div class="preview">
          Attēlu priekšskatījums:<br>   
-        <img src="" alt="" width="800px">
+        <img alt="" width="800px">
     </div>
 
 
@@ -46,16 +63,24 @@
         document.querySelector("#btn3").addEventListener("dblclick",function(){
             document.querySelector("h1").remove();
         })
-
-
         let atteluElementi = document.querySelectorAll(".images img");
-
         for(attels of atteluElementi){
             attels.addEventListener("mouseover",function(){
             //let src = this.src;
-            document.querySelector(".preview img").src = this.src;
+            let element = document.querySelector(".preview img");
+            element.src = this.src;
+            element.classList.add("animateFadein");
         });
+            attels.addEventListener("mouseleave",function(){
+                let element = document.querySelector(".preview img");
+                element.classList.remove("animateFadein");
+        
+            });
+                
+       
         }
+
+
 
         
 
