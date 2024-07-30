@@ -64,17 +64,19 @@
             document.querySelector("h1").remove();
         })
         let atteluElementi = document.querySelectorAll(".images img");
-        for(attels of atteluElementi){
+        for(attels of atteluElementi){ //cikls seko pa attēliem
             attels.addEventListener("mouseover",function(){
-            //let src = this.src;
+            //Katram elementam kas ir masīvā tiek pievienots notikuma klausitājs;
             let element = document.querySelector(".preview img");
             element.src = this.src;
+            //no viena elementa atribūts src tiek ierakstīts citā
             element.classList.add("animateFadein");
+            // Elementam tiek pievinota klase (class="animateFadein")
         });
             attels.addEventListener("mouseleave",function(){
                 let element = document.querySelector(".preview img");
                 element.classList.remove("animateFadein");
-        
+                // elementam tiek noņemta klase (class="animateFadein")
             });
                 
        
