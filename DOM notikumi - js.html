@@ -8,20 +8,44 @@
 <body>
     <h1></h1>
     <p></p>
-    <div class="images"></div>
+    <div class="images">
+        <img src="https://www.volvocars.com/images/v/-/media/project/contentplatform/data/media/campaigns/volvo-cars-heritage/little-volvo.jpg?h=374&iar=0&w=499" alt="" width="200px">
+        <img src="https://www.volvocars.com/images/v/-/media/project/contentplatform/data/media/campaigns/volvo-cars-heritage/safety-benchmark.jpg?h=380&iar=0&w=497" alt="" width="200px">
+        <img src="https://www.volvocars.com/images/v/-/media/project/contentplatform/data/media/heritagemodels/00_volvo_ov4_large.jpg?h=1932&iar=0&w=4096" alt="" width="200px">
+        <img src="https://volvoloveblog.wordpress.com/wp-content/uploads/2015/12/23_volvo_145_thumb.jpg" alt="" width="200px">
+    </div>
+    <div class="preview">
+         Attēlu priekšskatījums:<br>   
+        <img src="" alt="" width="800px">
+    </div>
 
 
-    <button onclick="trauksme()">Poga 1</button>
-    <button>Poga 2</button>
-    <button>Poga 3</button>
+
+    <button id="btn1" onclick="trauksme()">Poga 1</button>
+    <button id="btn2">Poga 2</button>
+    <button id="btn3">Poga 3</button>
+
+
+
 
 
     <script>
         // notikumi
 
+
+
         function trauksme(){
-            alert("Atrauksmes poga");
+            alert("Trauksmes poga");
         }
+
+        document.querySelector("#btn2").onclick = function(){
+            document.querySelector("h1").textContent = "Hello World!!!";
+        }
+
+
+        document.querySelector("#btn3").addEventListener("dblclick",function(){
+            document.querySelector("h1").remove();
+        })
 
     </script>
 </body>
