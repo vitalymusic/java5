@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+
+
+
+    <script>
+        let data = `
+            [
+                {
+                    "pageName":"Galvenā",
+                    "pageUrl":"index.html",
+                    "pageIcon":"ikona1.png"
+                },
+                {
+                    "pageName":"Par mums",
+                    "pageUrl":"about_us.html",
+                    "pageIcon":"ikona2.png"
+                },
+                {
+                    "pageName":"Kontakti",
+                    "pageUrl":"contacts.html",
+                    "pageIcon":"ikona3.png"
+                } 
+            ]
+        `;
+        // JSON - Javascript Object Notation
+
+
+        console.log(data);
+        let dataObject = JSON.parse(data);
+
+
+        console.log(dataObject); //JSON kļuvis par masīvu
+
+        for( element of dataObject){
+            document.querySelector('nav').innerHTML+=`
+                <a href="${element.pageUrl}">${element.pageName}</a>
+            `;
+        }
+
+        // produktu grozs, kas saglabāts kā objekts
+        let grozs = [
+            {
+                produktaNosaukums:"Mandarīni",
+                cena:4.67,
+                daudzums:0.750,
+                attels:"",
+                produktaUrl:""
+            },
+            {
+                produktaNosaukums:"Āboli Gold",
+                cena:2.34,
+                daudzums:1.57,
+                attels:"",
+                produktaUrl:""
+            },
+            {
+                produktaNosaukums:"Apelsīni",
+                cena:3.05,
+                daudzums:1.36,
+                attels:"",
+                produktaUrl:""
+            }
+
+        ];
+
+
+        console.log(grozs);
+
+        window.localStorage.clear();
+
+        window.localStorage.setItem("grozs",JSON.stringify(grozs));
+
+
+        alert(window.localStorage.getItem("grozs"));       
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+[
+   {
+    "pageName":"Galvenā",
+    "pageUrl":"index.html",
+    "pageIcon":"ikona1.png"
+   },
+   {
+    "pageName":"Par mums",
+    "pageUrl":"about_us.html",
+    "pageIcon":"ikona2.png"
+   },
+   {
+    "pageName":"Kontakti",
+    "pageUrl":"contacts.html",
+    "pageIcon":"ikona3.png"
+   } 
+]
