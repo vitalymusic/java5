@@ -14,13 +14,7 @@
         <!-- te ieliksim tekstu -->
     </p>
     <div class="cards">
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
-        <div class="card">7</div>
+       
     </div>
     <footer>
 
@@ -34,9 +28,49 @@
         // lastChild
         // nextSibling
         // previousSibling
+        
 
+        // Jaunu elementu (nodu) izveide
+
+        let virsraksts2 = document.createElement("h2");
+        virsraksts2.textContent = "Jauns apakšvirsraksts!";
+        
+        document.body.insertBefore(virsraksts2,document.querySelector("p"));
+
+
+        // šī metode ir jaraksta no Parent node attiecībā pret to kur vēlamies pievietot saturu
+
+
+
+        // appendChild()
+
+        document.body.appendChild(virsraksts2);
+
+        let cards = [];
+
+        for(let y=0;y<10;y++){
+            cards.push(document.createElement("div"));
+            cards[y].className = "card";
+            cards[y].textContent = `Kartiņa Nr: ${y+1}.`;
+        }
 
         
+        for(card of cards){
+            document.querySelector(".cards").appendChild(card);
+        }
+
+        // for(let i=0;i<10;i++){
+        //     
+        // }
+
+        // SPA - single page application
+
+        
+
+
+
+
+
     </script>
 </body>
 </html>
