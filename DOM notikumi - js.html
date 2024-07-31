@@ -41,11 +41,6 @@
     <button id="btn1" onclick="trauksme()">Poga 1</button>
     <button id="btn2">Poga 2</button>
     <button id="btn3">Poga 3</button>
-
-
-
-
-
     <script>
         // notikumi
 
@@ -64,7 +59,7 @@
             document.querySelector("h1").remove();
         })
         let atteluElementi = document.querySelectorAll(".images img");
-        
+
         for(attels of atteluElementi){ //cikls seko pa attēliem
             attels.addEventListener("mouseover",function(){
             //Katram elementam kas ir masīvā tiek pievienots notikuma klausitājs;
@@ -79,16 +74,7 @@
                 element.classList.remove("animateFadein");
                 // elementam tiek noņemta klase (class="animateFadein")
             });
-                
-       
         }
-
-
-
-        
-
-       
-
     </script>
 </body>
 </html>
