@@ -7,6 +7,11 @@
 
     <style>
 
+        html{
+            font-size: 14pt;
+            font-family: Arial;
+        }
+
         .galerija{
             display: grid;
             grid-template-columns: auto auto auto auto;
@@ -16,6 +21,12 @@
 
         .galerija img{
             width: 100%;
+        }
+
+        .pages{
+            display: flex;
+            gap:20px;
+            justify-content: center;
         }
 
     </style>
@@ -28,6 +39,15 @@
 
     </div>
 
+    <div class="pages">
+        <a href="" data-page="1">1</a>
+        <a href="" data-page="2">2</a>
+        <a href="" data-page="3">3</a>
+        <a href="" data-page="4">4</a>
+        <a href="" data-page="5">5</a>
+        <a href="" data-page="6">6</a>
+    </div>
+
     <div class="popup">
 
     </div>
@@ -38,9 +58,13 @@
 
 
 
-        fetch('https://picsum.photos/v2/list?page=1&limit=100/')
-    .then((response) => response.json())
-    .then((json) => ieladetBildes(json));
+        function sanemtBildes(lapa){
+            fetch(`https://picsum.photos/v2/list?page=${lapa}&limit=100/`)
+            .then((response) => response.json())
+            .then((json) => ieladetBildes(json));
+        }
+
+        
 
     function ieladetBildes(data){
             for(item of data){
@@ -56,7 +80,15 @@
     // 1. Rada pilnu attēlu sarakstu (var pievienot arī sadaļas)
     // 2. Klikšķinot uz bildes ta parādās pa visu ekrānu
 
+        let saites = document.querySelectorAll(".pages a");
 
+        for(saite of saites){
+            saite.onclick = function(event){
+                event.preventDefault();
+                document.querySelector(".galerija").innerHTML = "";
+                sanemtBildes(this.getAttribute("data-page"));
+            }
+        }
 
     </script>
 </body>
