@@ -12,6 +12,8 @@
 
     <script>
 
+// datu nosalīšana no cita API resursa
+
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then((response) => response.json())
     .then((json) => showData(json));
@@ -19,16 +21,39 @@
 
     function showData(data){
         for(item of data){
-            document.body.append(`
-            <div class="data item${item.id}"
-                <h1>${data.title}</h1>
-                <p>${data.body}</p>
+            document.body.innerHTML +=`
+            <div class="data item${item.id}">
+                <h3>${item.title}</h3>
+                <p>${item.body}</p>
             </div>
-        `)
+        `
         }
-        
-
     }
+
+
+
+// datu nolasīšana no faila
+
+fetch('./menu.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+fetch('./produktuKatalogs')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+
+    // https://jsonplaceholder.typicode.com/albums/1/photos
+
+
+
+    // https://picsum.photos/
+
+    // JSON Server
+
+    
+
+
     </script>
 </body>
 </html>
