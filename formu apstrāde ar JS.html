@@ -27,46 +27,85 @@
 
         <input type="checkbox" name="agree" id="agree"> 
         <label for="agree">Piekrītu lapas noteikumiem</label><br>
-        
-        
-        <input type="submit" value="Register">
+        <input type="submit" value="Register" disabled>
     </form>
 
+    
 
     <script>
+
         let regForm = document.querySelector("#reg_form");
 
+        let error = false;
+
+
         let emailCheck = "^[\w\.]+@([\w-]+\.)+[\w-]{2,4}$";
+        let emailCheck2 = "[a-z.!_0-9]+@+[a-z]+\.+[a-z]{2,4}";
         let passwordCheck = "([A-Z]{1,})+([a-z]{3,})+([0-9]{1,})+[!#&$<>_]";
         let parolesGarums = 8;
         // ManaParole2012! (ir simboli un jāparbauda garums);
+
+        function kluduPazinojums(elements,kludasTeksts){
+            errorDiv = document.createElement("div");
+            errorDiv.textContent = kludasTeksts;
+            errorDiv.className = "error";
+            elements.after(errorDiv);
+            error = true;
+        }    
+
+        function kluduTirishana(){
+
+            let errorDivs = document.querySelectorAll(".error");
+
+            for (errorDiv of errorDivs){
+                errorDiv.remove();
+            }
+        }
+
+
         regForm.onsubmit = function(event){
             event.preventDefault();
             // apstādina pārlūka noklusēto darbību (formas sūtīšanu);
+            kluduTirishana();
+
 
             if(document.querySelector("#username").value.length < 5){
-                errorDiv = document.createElement("div");
-                errorDiv.textContent = "Šis lauks ir jaaizpilda";
-                errorDiv.className = "error";
-                document.querySelector("#username").after(errorDiv);
+                kluduPazinojums(document.querySelector("#username"),"Šis lauks ir jaaizpilda");
+
             }
 
-            if(!document.querySelector("#email").value.match(RegExp(emailCheck))){
-                errorDiv = document.createElement("div");
-                errorDiv.textContent = "Uzrakstiet pareizu epastu!";
-                errorDiv.className = "error";
-                document.querySelector("#email").after(errorDiv);
+            if(!document.querySelector("#email").value.match(RegExp(emailCheck2))){
+                kluduPazinojums(document.querySelector("#email"),"Uzrakstiet pareizu epastu!");
             }
 
             if(!document.querySelector("#password").value.match(RegExp(passwordCheck)) && document.querySelector("#password").value.length < parolesGarums){
-                errorDiv = document.createElement("div");
-                errorDiv.textContent = "Parolei jāsastāv vismaz no 8 simboliem no kuriem ir viens cipars un viena speciālā zīme";
-                errorDiv.className = "error";
-                document.querySelector("#password").after(errorDiv);
+                kluduPazinojums(document.querySelector("#password"),"Parolei jāsastāv vismaz no 8 simboliem no kuriem ir viens cipars un viena speciālā zīme");
             }
 
 
+            if(document.querySelector("#confirm_password").value !== document.querySelector("#password").value){
+                
+                kluduPazinojums(document.querySelector("#confirm_password"),"Parolēm ir jāsakrīt");
+            }
+
+           
+            if(!error){
+                regForm.submit();
+            }else{
+                kluduPazinojums(regForm,"Jūsu formā ir kļūdas!")
+            }
+            
+
         }
+
+        document.querySelector("#agree").onchange = function(event){
+                if(this.checked){
+                    document.querySelector('input[type="submit"]').disabled = false;
+                }else{
+                    document.querySelector('input[type="submit"]').disabled = true;
+                }
+                
+            }
 
 
     </script>
