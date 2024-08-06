@@ -43,12 +43,14 @@
     .then((json) => ieladetBildes(json));
 
     function ieladetBildes(data){
+            for(item of data){
             document.querySelector(".galerija").innerHTML +=`
-                <div class="image" id="${data.id}">
-                <img src="${data.download_url}" >
-                <h3>${data.author}</h3>   
-                <a href="${data.download_url}">Ielādēt bildi</a> 
+                <div class="image" id="${item.id}">
+                <img src="${item.download_url}" >
+                <h3>${item.author}</h3>   
+                <a href="${item.download_url}">Ielādēt bildi</a> 
             `;
+        }        
         }
 
     // 1. Rada pilnu attēlu sarakstu (var pievienot arī sadaļas)
