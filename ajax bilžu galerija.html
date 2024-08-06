@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .galerija{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:10px;
+            border: 1px solid  black;
+        }
+
+        .galerija img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Bilžu galerija</h1>
+    
+    <div class="galerija">
+
+    </div>
+
+    <div class="popup">
+
+    </div>
+
+    <script>
+
+        // https://picsum.photos/  API
+
+
+
+        fetch('./https://picsum.photos/v2/list?page=1&limit=100/')
+    .then((response) => response.json())
+    .then((json) => ieladetBildes(json));
+
+    function ieladetBildes(data){
+            document.querySelector(".galerija").innerHTML +=`
+                <div class="image" id="${data.id}">
+                <img src="${data.download_url}" >
+                <h3>${data.author}</h3>   
+                <a href="${data.download_url}">Ielādēt bildi</a> 
+            `;
+        }
+
+    // 1. Rada pilnu attēlu sarakstu (var pievienot arī sadaļas)
+    // 2. Klikšķinot uz bildes ta parādās pa visu ekrānu
+
+
+
+    </script>
+</body>
+</html>
