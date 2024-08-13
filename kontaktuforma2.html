@@ -57,15 +57,17 @@
             .catch(data=>alert(`Error: ${data}`))
 
         }
-
+        function izdzest(event){
+            event.target.remove()
+        }
 
 
         function pazinojums(teksts){
-            document.body.append(`
-                <div class="alert alert-success" role="alert onclick="this.remove()">
+            document.body.innerHTML +=`
+                <div class="alert alert-success" role="alert" onclick="izdzest(event)">
                     ${teksts}
                 </div>
-            `);
+            `;
         }
     </script>
 </body>
