@@ -35,5 +35,30 @@ Uzrakstīt funkciju showMenu() kura uzvada uz lapas navigācijas izvēlni no mas
     },
 ]
 
+7. uzdevums TABI
+
+Uzrakstīt funkciju, kas parāda saturu atkarībā no nospiestas saites (TABA)
+
+HTML kods:
+<div class="tabs">
+    <a href="" data-tab="1">1. sadaļa</a>
+    <a href="" data-tab="2">2. sadaļa</a>
+    <a href="" data-tab="3">3. sadaļa</a>
+</div>
+<div class = "tab_content">
+        <div class="tab" data-tab="1">
+            <h1>Pirmā sadaļa</h1>
+            <p>Saturs pirmajai sadaļai</p>
+        </div>
+         <div class="tab" data-tab="2">
+            <h1>Otrā sadaļa</h1>
+            <p>Saturs pirmajai sadaļai</p>
+        </div>
+         <div class="tab" data-tab="3">
+            <h1>Trešā sadaļa</h1>
+            <p>Saturs pirmajai sadaļai</p>
+        </div>
+<div>
+
 
 
