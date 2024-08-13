@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tabs-div{
+            outline:2px solid black;
+            padding: 10px;
+        }
+
+        .tabs{
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            background-color: rgb(123, 123, 241);
+        }
+
+        .tabs a{
+            display: block;
+            text-decoration: none;
+            background-color: rgb(27, 8, 242);
+            padding: 10px;
+            color:white;
+        }
+        .active{
+            background-color: black !important;
+        }
+    </style>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            // Pārbauda ka visi DOM elementi ir ielādēti
+
+            let tabu_pogas = document.querySelectorAll(".tabs a");
+
+            for(poga of tabu_pogas){
+                    
+                 poga.addEventListener("click",function(event){
+                    event.preventDefault();
+                    // tabu_pogas.forEach(function(poga){
+                    //     poga.classList.remove("active");
+                    // })
+
+                    tabu_pogas.forEach(poga=>poga.classList.remove("active"))
+                    this.classList.add("active");
+                    paraditTabu(this.getAttribute("data-tab"));
+                 })   
+
+            }
+
+            tabu_pogas[0].click();
+
+
+
+            
+
+        })
+
+        function paraditTabu(tabaNumurs){
+                let tabuSaturs = document.querySelectorAll(".tab_content .tab");
+
+                tabuSaturs.forEach(function(tabs){
+                    tabs.style.display = "none";
+                })
+
+                document.querySelector(`.tab[data-tab="${tabaNumurs}"]`).style.display = "block";
+
+            }
+       
+
+    </script>
+</head>
+<body>
+    <h1>Tabi</h1>
+
+    <div class="tabs-div">
+        <div class="tabs">
+            <a href="" data-tab="1">1. sadaļa</a>
+            <a href="" data-tab="2">2. sadaļa</a>
+            <a href="" data-tab="3">3. sadaļa</a>
+        </div>
+        <div class = "tab_content">
+                <div class="tab" data-tab="1">
+                    <h1>Pirmā sadaļa</h1>
+                    <p>Saturs pirmajai sadaļai</p>
+                </div>
+                 <div class="tab" data-tab="2">
+                    <h1>Otrā sadaļa</h1>
+                    <p>Saturs pirmajai sadaļai</p>
+                </div>
+                 <div class="tab" data-tab="3">
+                    <h1>Trešā sadaļa</h1>
+                    <p>Saturs pirmajai sadaļai</p>
+                </div>
+        <div>
+    </div>
+</body>
+</html>
