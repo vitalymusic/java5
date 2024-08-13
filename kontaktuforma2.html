@@ -22,7 +22,7 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
               </div>
-              
+
               <input type="hidden" name="_subject" value="Vēstule no jūsu mājaslapas">
               <input type="text" name="_honey" style="display:none">
               <input type="hidden" name="_template" value="table">
@@ -52,10 +52,20 @@
                 body:formasDati
             })
             .then(response => response.json())
-            .then(data => alert("Dati ir nosūtīti"))
+            .then(data => pazinojums("Dati ir nosūtīti"))
             .then(()=>{form.clear()})
             .catch(data=>alert(`Error: ${data}`))
 
+        }
+
+
+
+        function pazinojums(teksts){
+            document.body.append(`
+                <div class="alert alert-success" role="alert onclick="this.remove()">
+                    ${teksts}
+                </div>
+            `);
         }
     </script>
 </body>
