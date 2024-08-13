@@ -44,7 +44,7 @@
             justify-content: center;
             align-items: center;
             display: none;
-            background-color: rgba(255, 255, 255, 0.52);
+            background-color: rgba(255, 255, 255, 0.77);
 
         }
         .popup img{
@@ -130,6 +130,10 @@
                 document.querySelector(".popup").style.display = "flex";
             })
         } 
+        
+        document.querySelector(".popup").onclick = function(){
+            this.style.display = "none";
+        }
     }
     
 
